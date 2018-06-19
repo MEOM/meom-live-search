@@ -2,7 +2,7 @@
 
 # Usage
 
-1. Add `<div class="live-search-results"></div>` where you'd like to list live search results.
+1. Add `<div class="meom-live-search"></div>` where you'd like to list live search results.
 
 2. For custom results, add a following file to your theme folder: `/meom-live-search/search-results.php`.
 

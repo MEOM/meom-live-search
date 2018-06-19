@@ -1,0 +1,14 @@
+{
+  "name": "meom/meom-live-search",
+  "version": "1.0.0",
+  "description": "WordPress plugin for showing live search results.",
+  "homepage": "https://www.meom.fi",
+  "license": "GPLv2 (or later)",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "MEOM Oy",
+      "email": "tech@meom.fi"
+    }
+  ]
+}

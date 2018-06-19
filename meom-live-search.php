@@ -20,7 +20,6 @@ add_action('rest_api_init', function () {
 				) ),
 			);
 
-			// $q = get_query_var();
 			$args = apply_filters( 'meom_live_search_args', array_merge( $default_args, $_GET ), $_GET );
 
 			ob_start();

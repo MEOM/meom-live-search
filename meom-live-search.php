@@ -5,7 +5,7 @@
 	Description: Showing live search results.
 	Author: MEOM
 	Author URI: https://www.meom.fi
-	Version: 1.0.0
+	Version: 1.0.1
 */
 
 add_action('rest_api_init', function () {
@@ -24,9 +24,15 @@ add_action('rest_api_init', function () {
 
 			ob_start();
 
-			query_posts( $args );
+			if ( function_exists( 'relevanssi_do_query' ) ) {
+				$query_object = new WP_Query( $args );
+				relevanssi_do_query( $query_object );
+				$GLOBALS['wp_query'] = $query_object;
+			} else {
+				query_posts( $args );
+			}
+
 			mls_render_template();
-			wp_reset_postdata();
 
 			return array( 'resultHTML' => ob_get_clean() );
 		},
@@ -48,7 +54,7 @@ function mls_enqueue_scripts() {
 		'meom-live-search',
 		plugins_url( '/js/meom-live-search.js', __FILE__ ),
 		array( 'jquery', 'underscore' ),
-		'1.0.0',
+		'1.0.1',
 		true
 	);
 

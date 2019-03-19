@@ -20,8 +20,9 @@ Content for live search result could be like:
 
 # Notes
 
-- Plugins listens inputs with `[name="s"]` and fires ajax request on changes.
+- Plugins listens inputs with `[name="s"]` and fires ajax request on changes. Input have to be wrapped inside `form` element.
 - It will render results inside `.meom-live-search` elements.
+- Spinner is shown while requesting sever for resulst. Spinner uses classname ``.
 
 # Filters
 ```

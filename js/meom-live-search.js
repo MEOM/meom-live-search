@@ -1,6 +1,5 @@
 (function($) {
   $(function() {
-    var searchTerm = '';
 
     function livesearch() {
       var input = $(this);
@@ -8,7 +7,7 @@
       var formData = form.serialize();
       var spinner = $('.meom-live-search__spinner');
 
-      $.get('/wp-json/meom/v1/search?' + formData + '&lang=' + window.liveSearch.lang, function(response) {
+      $.get('/wp-json/meom-live-search/v1/search?' + formData + '&lang=' + window.liveSearch.lang, function(response) {
         spinner.removeClass('meom-live-search__spinner--show');
         $(window.liveSearch.resultsElement).html(response.resultHTML);
       });
@@ -18,7 +17,7 @@
 
     $(window.liveSearch.searchInput).on('keyup', _.throttle(function(event) {
       livesearch.bind(event.target)();
-    }, 300, { leading: false }));
+    }, 400, { leading: false }));
 
   });
 })(jQuery);

@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MEOM Live Search 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/meom-live-"
+"search\n"
+"POT-Creation-Date: 2019-04-03T13:01:44+00:00\n"
+"PO-Revision-Date: 2019-04-03 16:07+0300\n"
+"Last-Translator: Tuomas Jakonen <tuomas@meom.fi>\n"
+"Language-Team: MEOM Oy\n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;_e;_x;__;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#. Plugin Name of the plugin
+msgid "MEOM Live Search"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/MEOM/meom-live-search"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"WordPress plugin for showing live search results. Compatible with Polylang "
+"and Relevanssi plugins."
+msgstr ""
+"WordPress lisäosa live haun tulosten näyttämiseen. Yhteensopiva Polylang "
+"ja Relevanssi -lisäosien kanssa."
+
+#. Author of the plugin
+msgid "MEOM"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.meom.fi"
+msgstr ""
+
+#: templates/search-results.php:3
+msgid "Results:"
+msgstr "Tulokset:"
+
+#: templates/search-results.php:18
+msgid "No search results found. :("
+msgstr "Haulle ei löytynyt tuloksia. :("

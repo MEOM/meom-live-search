@@ -86,6 +86,8 @@ class MEOM_Live_Search {
                     $search_results = new WP_Query( $args );
                     if ( ! empty( $search_results->posts ) ) {
                         $search_results = $search_results->posts;
+                    } else {
+                        $search_results = [];
                     }
                 }
 

@@ -74,7 +74,7 @@ class MEOM_Live_Search {
                     ) ),
                 );
 
-                $args = apply_filters( 'meom_live_search_args', array_merge( $default_args, sanitize_key( $_GET ) ), sanitize_key( $_GET ) );
+                $args = apply_filters( 'meom_live_search_args', array_merge( $default_args, $_GET ), $_GET );
 
                 ob_start();
 
@@ -90,7 +90,7 @@ class MEOM_Live_Search {
                     }
                 }
 
-                mls_render_template( [ 'search_results' => $search_results ] );
+                $this->mls_render_template( [ 'search_results' => $search_results ] );
 
                 return array( 'resultHTML' => ob_get_clean() );
             },
@@ -103,7 +103,7 @@ class MEOM_Live_Search {
      * @since   1.0.0
      * @version 1.0.0
      */
-    public function mls_render_template() {
+    public function mls_render_template( $args = [] ) {
         $template = locate_template( '/meom-live-search/search-results.php' );
 
         if ( ! $template ) {

@@ -80,7 +80,6 @@ class MEOM_Live_Search {
 
                 if ( function_exists( 'relevanssi_do_query' ) ) {
                     $query_object = new WP_Query( $args );
-                    relevanssi_do_query( $query_object );
                     $search_results = relevanssi_do_query( $query_object );
                 } else {
                     $search_results = new WP_Query( $args );

@@ -124,7 +124,7 @@ class MEOM_Live_Search {
         wp_enqueue_script(
             'meom-live-search',
             plugins_url( '/js/meom-live-search.js', __FILE__ ),
-            array( 'jquery', 'underscore' ),
+            array( 'jquery' ),
             MEOM_LIVE_SEARCH_VERSION,
             true
         );
@@ -134,7 +134,18 @@ class MEOM_Live_Search {
             'resultsElement' => esc_attr( apply_filters( 'meom_live_search_results_element', '.meom-live-search' ) ),
             'searchInput'    => esc_attr( apply_filters( 'meom_live_search_input', '[name="s"]' ) ),
         );
-        wp_localize_script( 'meom-live-search', 'liveSearch', $live_search );
+        wp_localize_script(
+            'meom-live-search',
+            'liveSearch',
+            $live_search
+        );
+
+        wp_enqueue_style(
+            'meom-live-search-style',
+            plugins_url( 'css/meom-live-search.css', __FILE__ ),
+            array(),
+            MEOM_LIVE_SEARCH_VERSION
+        );
     }
 
     /**
@@ -144,7 +155,11 @@ class MEOM_Live_Search {
      * @version 1.0.0
      */
     public function load_textdomain() {
-        load_plugin_textdomain( 'meom-live-search', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+        load_plugin_textdomain(
+            'meom-live-search',
+            false,
+            dirname( plugin_basename( __FILE__ ) ) . '/languages/'
+        );
     }
 }
 

@@ -1,9 +1,13 @@
-<div class="meom-live-search__results-wrapper">
-    <h2>
-        <?php esc_html_e( 'Results:', 'meom-live-search' ); ?>
-    </h2>
+<div class="meom-live-search">
     <?php
-    if ( isset( $search_results ) && ! empty( $search_results ) ) : ?>
+    if ( isset( $search_results ) ) : ?>
+        <h2>
+            <?php esc_html_e( 'Results:', 'meom-live-search' ); ?>
+        </h2>
+        <p class="meom-live-search__loader">
+            <?php esc_html_e( 'Searching...', 'meom-live-search' ); ?>
+        </p>
+        <?php if ( ! empty( $search_results ) ) : ?>
         <ul class="meom-live-search__list">
             <?php foreach ( $search_results as $result ) : ?>
                 <li class="meom-live-search__item">
@@ -13,9 +17,10 @@
                 </li>
             <?php endforeach; ?>
         </ul>
-    <?php else : ?>
-        <p class="meom-live-search__error">
-            <?php esc_html_e( 'No search results found. :(', 'meom-live-search' ); ?>
-        </p>
-    <?php endif; ?>
+        <?php else : ?>
+            <p class="meom-live-search__error">
+                <?php esc_html_e( 'No search results found. :(', 'meom-live-search' ); ?>
+            </p>
+        <?php endif;
+    endif; ?>
 </div>

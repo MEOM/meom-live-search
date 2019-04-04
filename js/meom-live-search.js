@@ -5,14 +5,14 @@
       var input = $(this);
       var form = input.parents('form');
       var formData = form.serialize();
-      var spinner = $('.meom-live-search__spinner');
+      var loader = $('.meom-live-search__loader');
 
       $.get('/wp-json/meom-live-search/v1/search?' + formData + '&lang=' + window.liveSearch.lang, function(response) {
-        spinner.removeClass('meom-live-search__spinner--show');
+        loader.removeClass('meom-live-search__loader--show');
         $(window.liveSearch.resultsElement).html(response.resultHTML);
       });
 
-      spinner.addClass('meom-live-search__spinner--show');
+      loader.addClass('meom-live-search__loader--show');
     }
 
     $(window.liveSearch.searchInput).on('keyup', _.throttle(function(event) {

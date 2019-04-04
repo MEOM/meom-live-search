@@ -1,0 +1,7 @@
+.meom-live-search__loader {
+    display: none;
+}
+
+.meom-live-search__loader--show {
+    display: block;
+}

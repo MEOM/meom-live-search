@@ -2,14 +2,6 @@
 
 ## Usage
 
-**HOX!** You need to include search form before using this plugin. For example:
-```
-<form>
-	<label for="s">Search:</label>
-	<input type="text" name="s">
-</form>
-```
-
 1. Add `<div class="meom-live-search"></div>` where you'd like to list live search results.
 
 2. For custom results, add a following file to your theme folder: `/meom-live-search/search-results.php`.
@@ -28,6 +20,14 @@ Below is an example of custom search result template. Our function returns a var
 		<?php endforeach; ?>
 	</ul>
 </div>
+```
+
+**HOX!** You need to include search form before using this plugin. For example:
+```
+<form>
+	<label for="s">Search:</label>
+	<input type="text" name="s">
+</form>
 ```
 
 ## Notes

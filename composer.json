@@ -1,10 +1,11 @@
 {
   "name": "meom/meom-live-search",
-  "version": "1.0.0",
   "description": "WordPress plugin for showing live search results. Compatible with Polylang and Relevanssi plugins.",
   "homepage": "https://www.meom.fi",
+  "keywords": ["wordpress", "plugin", "search", "live-search"],
   "license": "GPLv2 (or later)",
   "type": "wordpress-plugin",
+  "version": "1.0.0",
   "authors": [
     {
       "name": "MEOM Oy",

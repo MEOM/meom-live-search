@@ -44,7 +44,7 @@ add_filter( 'meom_live_search_results_element', function( $results_element ) {
 } );
 ```
 
-Filter for changing input element we are listening for.
+Filter for changing input element we are listening to.
 ```
 add_filter( 'meom_live_search_input', function( $input ) {
 	return '[name="s"]';
@@ -55,5 +55,5 @@ Filter for changing search arguments.
 ```
 add_filter( 'meom_live_search_args', function( $args, $get_params ) {
 	return array_merge( $args, array( 'posts_per_page' => 5 ) );
-} );
+}, 10, 2 );
 ```

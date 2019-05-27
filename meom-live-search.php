@@ -90,7 +90,7 @@ class MEOM_Live_Search {
                     }
                 }
 
-                $this->mls_render_template( [ 'search_results' => $search_results ] );
+                $this->mls_render_template( [ 'search_results' => $search_results, 's' => $args[ 's' ] ] );
 
                 return array( 'resultHTML' => ob_get_clean() );
             },

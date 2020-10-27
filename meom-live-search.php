@@ -94,6 +94,7 @@ class MEOM_Live_Search {
 
                 return array( 'resultHTML' => ob_get_clean() );
             },
+            'permission_callback' => '__return_true',
         ));
     }
 

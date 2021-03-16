@@ -3,7 +3,7 @@
  * Plugin Name: MEOM Live Search
  * Plugin Uri: https://github.com/MEOM/meom-live-search
  * Description: WordPress plugin for showing live search results. Compatible with Polylang and Relevanssi plugins.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: MEOM
  * Author URI: https://www.meom.fi
  * Text Domain: meom-live-search
@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit();
 }
 
-define( 'MEOM_LIVE_SEARCH_VERSION', '1.0.2' );
+define( 'MEOM_LIVE_SEARCH_VERSION', '1.0.3' );
 
 /**
  * MEOM Live Search class.

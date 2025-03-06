@@ -34,6 +34,7 @@ Below is an example of custom search result template. Our function returns a var
 
 - Plugin listens inputs with `[name="s"]` and fires ajax request on changes. Input have to be wrapped inside `<form>` element.
 - Plugin will render results inside `.meom-live-search` elements.
+- Result element `.meom-live-search` will have a class `.active` on input focusin event and the class will be removed on focusout event.
 - Loader is shown while requesting server for results. Loader uses class name `.meom-live-search__loader`. When loader is visible it gets class name `.meom-live-search__loader--show`
 
 ## Filters

@@ -7,7 +7,7 @@
       var formData = form.serialize();
       var loader = $( '.meom-live-search__loader' );
 
-      $.get( '/wp-json/meom-live-search/v1/search?' + formData + '&lang=' + window.liveSearch.lang, function(response) {
+      $.get( '/wp-json/meom-live-search/v1/search?' + formData + '&lang=' + window.liveSearch.lang + '&mls_locale=' + window.liveSearch.locale, function(response) {
         loader.removeClass( 'meom-live-search__loader--show' );
         $( window.liveSearch.resultsElement ).html( response.resultHTML );
       });

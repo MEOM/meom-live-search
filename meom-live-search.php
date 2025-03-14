@@ -3,7 +3,7 @@
  * Plugin Name: MEOM Live Search
  * Plugin Uri: https://github.com/MEOM/meom-live-search
  * Description: WordPress plugin for showing live search results. Compatible with Polylang and Relevanssi plugins.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: MEOM
  * Author URI: https://www.meom.fi
  * Text Domain: meom-live-search
@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit();
 }
 
-define( 'MEOM_LIVE_SEARCH_VERSION', '1.0.4' );
+define( 'MEOM_LIVE_SEARCH_VERSION', '1.0.5' );
 
 /**
  * MEOM Live Search class.
@@ -132,6 +132,7 @@ class MEOM_Live_Search {
 
         $live_search = array(
             'lang'           => ( function_exists( 'pll_current_language' ) ) ? pll_current_language( 'slug' ) : get_locale(),
+            'locale'         => ( function_exists( 'pll_current_language' ) ) ? pll_current_language( 'locale' ) : get_locale(),
             'resultsElement' => esc_attr( apply_filters( 'meom_live_search_results_element', '.meom-live-search' ) ),
             'searchInput'    => esc_attr( apply_filters( 'meom_live_search_input', '[name="s"]' ) ),
         );
@@ -165,3 +166,18 @@ class MEOM_Live_Search {
 }
 
 $meom_live_search = new MEOM_Live_Search();
+
+/**
+ * Change locale to match mls_locale parameter
+ *
+ * @since 1.0.5
+ * @param string $locale Locale.
+ * @return string
+ */
+function mls_change_locale_for_rest( $locale ) {
+    if ( isset( $_GET['mls_locale'] ) ) {
+        return $_GET['mls_locale'];
+    }
+    return $locale;
+}
+add_filter( 'determine_locale', 'mls_change_locale_for_rest', 9999 );

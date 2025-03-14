@@ -1,3 +1,7 @@
+= 1.0.5 =
+
+- Determine right locale for the templates.
+
 = 1.0.4 =
 
 - Add active state to result element as a class.

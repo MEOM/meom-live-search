@@ -1,3 +1,7 @@
+= 1.0.4 =
+
+- Add active state to result element as a class.
+
 = 1.0.3 =
 
 - Fix issue with registering rest route with latest WordPress permission checking.

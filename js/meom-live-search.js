@@ -19,6 +19,13 @@
       livesearch.bind( event.target )();
     }, 400, { leading: false }));
 
+    $(window.liveSearch.searchInput).on( 'focusin', function(event) {
+      $( window.liveSearch.resultsElement ).addClass( 'active' );
+    });
+    $(window.liveSearch.searchInput).on( 'focusout', function(event) {
+      $( window.liveSearch.resultsElement ).removeClass( 'active' );
+    });
+
   });
 })(jQuery);
 
